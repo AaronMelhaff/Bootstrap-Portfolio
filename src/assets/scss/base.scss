@@ -6,9 +6,8 @@
   border: 0 solid #00000000;
 }
 
-.btn {
-  display: flex !important;
-  flex-wrap: nowrap !important;
+.w-356px {
+  min-width: 356px;
 }
 
 @import './portfolio-bootstrap';
@@ -21,8 +20,7 @@ body {
   height: 100%;
 
   overflow-y: hidden;
-
-  padding-top: 4rem;
-
 }
+
+
 
