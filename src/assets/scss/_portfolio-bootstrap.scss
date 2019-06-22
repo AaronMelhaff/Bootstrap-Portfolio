@@ -1,0 +1,37 @@
+
+// Custom theme code for bootstrap.
+
+$primary:       #3b5177;
+$secondary:     #30238e;
+$success:       #26a744;
+$warning:       #ffb52d;
+$danger:        #8e2a23;
+$info:          #00ccff;
+
+$theme-colors: (
+        "dark-primary": #006225,
+        "gray":         #495057,
+        "purple":       #8e2382
+);
+
+$enable-rounded: false;
+
+$input-disabled-bg: #f8f9fa;
+
+.form-control:disabled {
+  color: #7d7d7d;
+}
+
+$btn-focus-width: 0;
+$btn-focus-box-shadow: 0;
+$btn-active-box-shadow: 0;
+
+$input-focus-box-shadow: 0;
+
+// Replace this with the path to your bootstrap source code folder.
+// Bootstrap source code can be downloaded from the bootstrap site or through npm.
+@import './../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+@include media-breakpoint-up(xl) {
+  .modal-xl { max-width: 1200px; }
+}

@@ -1,0 +1,28 @@
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0 solid #00000000;
+}
+
+.btn {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+}
+
+@import './portfolio-bootstrap';
+@import './logo';
+
+
+body {
+  width: 100vw !important;
+  min-height: 100vh;
+  height: 100%;
+
+  overflow-y: hidden;
+
+  padding-top: 4rem;
+
+}
+
