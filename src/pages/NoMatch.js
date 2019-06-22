@@ -6,7 +6,7 @@ import { Fade, Container, Row, Col, Alert } from 'react-bootstrap';
 const NoMatch = (props) => {
   return (
     <Fade in appear={true}>
-      <Container className='mt-4'>
+      <Container className='mt-2'>
         <Row>
           <Col 
             xs={{span: 12, offset: 0}}
