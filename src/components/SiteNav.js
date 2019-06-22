@@ -22,29 +22,29 @@ export default function SiteNav(props) {
             <Nav className='w-356px'>
               <Link to='/' exact className='btn btn-primary d-block nav-btn'>
                   <span className='mr-1'>About</span>
-                  <img className='icon-sm' src={ AboutIcon } alt='-' />
+                  <img src={ AboutIcon } alt='about icon' />
               </Link>
               <Link to='/projects' className='btn btn-primary d-block nav-btn'>
                   <span className='mr-1'>Portfolio</span>
-                  <img className='icon-sm' src={ PortfolioIcon } alt='-' />
+                  <img src={ PortfolioIcon } alt='portfolio icon' />
               </Link>
               <Link to='/contact' className='btn btn-primary d-block nav-btn'>
                   <span className='mr-1'>Contact</span>
-                  <img className='icon-sm' src={ ContactIcon } alt='-' />
+                  <img src={ ContactIcon } alt='contact icon' />
               </Link>
             </Nav>
             <div className='d-flex justify-content-center justify-content-lg-end w-100' rel='noopener noreferrer'>
-              <Link className='btn btn-primary' to='https://www.facebook.com/aaron.melhaff' target='_blank' rel='noopener noreferrer'>
-                  <img className='' src={ FacebookIcon } alt='Facebook' />
-              </Link>
+              <a className='btn btn-primary' href='https://www.facebook.com/aaron.melhaff' target='_blank' rel='noopener noreferrer'>
+                  <img src={ FacebookIcon } alt='Facebook' />
+              </a>
 
-              <Link className='btn btn-primary' to='https://github.com/AaronMelhaff' target='_blank' rel='noopener noreferrer'>
-                  <img className='' src={ GithubIcon } alt='Github' />
-              </Link>
+              <a className='btn btn-primary' href='https://github.com/AaronMelhaff' target='_blank' rel='noopener noreferrer'>
+                  <img src={ GithubIcon } alt='Github' />
+              </a>
 
-              <Link className='btn btn-primary' to='https://www.linkedin.com/in/aaron-melhaff/' target='_blank' rel='noopener noreferrer'>
-                  <img className='' src={ LinkedIn } alt='LinkedIn' />
-              </Link>
+              <a className='btn btn-primary' href='https://www.linkedin.com/in/aaron-melhaff/' target='_blank' rel='noopener noreferrer'>
+                  <img src={ LinkedIn } alt='LinkedIn' />
+              </a>
             </div>
         </Navbar.Collapse>
       </Navbar>
