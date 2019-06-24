@@ -25,6 +25,7 @@ export default function SiteNav(props) {
                   <SVGIcon className='button-icon icon-sm' path={icons('contact')}/>
               </Link>
             </Nav>
+            <hr className='d-lg-none border'/>
             <div className='d-flex justify-content-center justify-content-lg-end w-100' rel='noopener noreferrer'>
               {/* <a className='btn btn-primary' href='https://www.facebook.com/aaron.melhaff' target='_blank' rel='noopener noreferrer'>
                 <SVGIcon className='button-icon icon-sm' path={icons('facebook')}/>
