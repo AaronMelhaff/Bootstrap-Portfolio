@@ -2,16 +2,8 @@ import React from 'react';
 
 import { NavLink as Link } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
-
-// Nav Button Icons
-import AboutIcon from './../assets/images/icons/account-card-details.svg';
-import PortfolioIcon from './../assets/images/icons/folder-open.svg';
-import ContactIcon from './../assets/images/icons/ic_email_48px.svg';
-
-// Social Media Icons
-import FacebookIcon from './../assets/images/icons/facebook.svg';
-import GithubIcon from './../assets/images/icons/github-circle.svg';
-import LinkedIn from './../assets/images/icons/linkedin.svg';
+import SVGIcon from './../components/SVGIcon';
+import icons from '../utilities/icons';
 
 export default function SiteNav(props) {
 
@@ -22,28 +14,28 @@ export default function SiteNav(props) {
             <Nav className='w-356px'>
               <Link to='/' exact className='btn btn-primary d-block nav-btn'>
                   <span className='mr-1'>About</span>
-                  <img src={ AboutIcon } alt='about icon' />
+                  <SVGIcon className='button-icon icon-sm' path={icons('about')}/>
               </Link>
-              <Link to='/projects' className='btn btn-primary d-block nav-btn'>
+              <Link to='/portfolio' className='btn btn-primary d-block nav-btn'>
                   <span className='mr-1'>Portfolio</span>
-                  <img src={ PortfolioIcon } alt='portfolio icon' />
+                  <SVGIcon className='button-icon icon-sm' path={icons('portfolio')}/>
               </Link>
               <Link to='/contact' className='btn btn-primary d-block nav-btn'>
                   <span className='mr-1'>Contact</span>
-                  <img src={ ContactIcon } alt='contact icon' />
+                  <SVGIcon className='button-icon icon-sm' path={icons('contact')}/>
               </Link>
             </Nav>
             <div className='d-flex justify-content-center justify-content-lg-end w-100' rel='noopener noreferrer'>
-              <a className='btn btn-primary' href='https://www.facebook.com/aaron.melhaff' target='_blank' rel='noopener noreferrer'>
-                  <img src={ FacebookIcon } alt='Facebook' />
-              </a>
+              {/* <a className='btn btn-primary' href='https://www.facebook.com/aaron.melhaff' target='_blank' rel='noopener noreferrer'>
+                <SVGIcon className='button-icon icon-sm' path={icons('facebook')}/>
+              </a> */}
 
               <a className='btn btn-primary' href='https://github.com/AaronMelhaff' target='_blank' rel='noopener noreferrer'>
-                  <img src={ GithubIcon } alt='Github' />
+                <SVGIcon className='button-icon icon-sm' path={icons('github')}/>
               </a>
 
               <a className='btn btn-primary' href='https://www.linkedin.com/in/aaron-melhaff/' target='_blank' rel='noopener noreferrer'>
-                  <img src={ LinkedIn } alt='LinkedIn' />
+                <SVGIcon className='button-icon icon-sm' path={icons('linkedin')}/>
               </a>
             </div>
         </Navbar.Collapse>
