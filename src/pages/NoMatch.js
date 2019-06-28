@@ -16,7 +16,7 @@ const NoMatch = (props) => {
             >
             <Alert variant='danger'>
               <Alert.Heading>404</Alert.Heading>
-              <p>The page you are looking for does not exist!</p>
+              <p>The item you are looking for does not exist!</p>
             </Alert>
           </Col>
         </Row>
