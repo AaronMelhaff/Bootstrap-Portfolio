@@ -27,6 +27,7 @@ $btn-focus-box-shadow: 0;
 $btn-active-box-shadow: 0;
 
 $input-focus-box-shadow: 0;
+$grid-gutter-width: 0;
 
 // Replace this with the path to your bootstrap source code folder.
 // Bootstrap source code can be downloaded from the bootstrap site or through npm.
@@ -37,7 +38,7 @@ $input-focus-box-shadow: 0;
 }
 
 @each $color, $value in $theme-colors {
-  .btn-#{$color} {
+  .btn-#{$color}, .btn-link {
     .button-icon {
       display: inline-block;
       height: 100%;
