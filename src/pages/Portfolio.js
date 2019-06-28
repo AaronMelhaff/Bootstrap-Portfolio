@@ -45,11 +45,14 @@ const Portfolio = (props) => {
   // Find all projects that match the selected tags.
   const matchingProjects = (selectedTags.size > 0) ? 
     projects.filter(project => {
-      project.tags.forEach(tag => {
-        if(selectedTags.has(tag) === true) return true;
-      });
-      return false;
-    }) : projects;
+      // Find all selected tags that match projects.
+      const searchResults = Array.from(selectedTags).filter(tag =>
+        project.tags.includes(tag)
+      );
+
+      // Ensure all selected tags were found.
+      return (searchResults.length === selectedTags.size);
+    }) : projects; // If there are no tags selected, show all projects.
 
   // Create links for each of the projects that match the selected tags.
   const projectLinks = (matchingProjects.length > 0) ? matchingProjects.map((project, index) => 

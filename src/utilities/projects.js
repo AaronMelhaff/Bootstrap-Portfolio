@@ -59,13 +59,13 @@ const projects = [
     title: 'Gloomtility',
     url: '/gloomtility',
     component: NoMatch,
-    tags: ['javascript', 'java', 'restful', 'api', 'json', 'postgresql', 'full-stack', 'aws', 'react', 'redux', 'spring', 'spring-boot', 'sass']
+    tags: ['javascript', 'java','web-development', 'front-end', 'restful', 'api', 'json', 'postgresql', 'full-stack', 'aws', 'react', 'redux', 'spring', 'spring-boot', 'sass']
   },
   {
     title: 'Schedule-IT',
     url: '/schedule-it',
     component: NoMatch,
-    tags: ['javascript', 'jquery', 'sass', 'php', 'api', 'mysql', 'sql', 'full-stack', 'json', 'bootstrap']
+    tags: ['javascript', 'jquery', 'web-development', 'front-end', 'sass', 'php', 'api', 'mysql', 'sql', 'full-stack', 'json', 'bootstrap']
   }
 ];
 
