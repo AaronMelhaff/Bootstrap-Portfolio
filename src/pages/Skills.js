@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Collapse, Card } from 'react-bootstrap';
+import { Fade, Card } from 'react-bootstrap';
 import SVGIcon from './../components/SVGIcon';
 import icons from './../utilities/icons';
 
 const Skills = (props) => {
   return (
-    <Collapse in appear={true}>
+    <Fade in appear={true}>
       <Card>
         <Card.Header>
           <div className='d-flex'>
@@ -46,12 +46,12 @@ const Skills = (props) => {
             <h1 className='display-4 ml-3 mb-0'>jQuery</h1>
           </div>
           <div className='d-flex'>
-            <SVGIcon className='icon' fill='#1e92ff' path={icons('react')} />
+            <SVGIcon className='icon' fill='#61dafb' path={icons('react')} />
             <h1 className='display-4 ml-3 mb-0'>React.js</h1>
           </div>
         </Card.Header>
       </Card>
-    </Collapse>
+    </Fade>
   );
 };
 
