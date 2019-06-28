@@ -15,19 +15,17 @@ const About = (props) => {
       <Container className='mt-2'>
         <Row>
           <Col>
-            <Card>
-              <Card.Header><h2 className='text-primary'>Aaron Melhaff</h2></Card.Header>
+            <Card className='border-0'>
+              <Card.Header className='bg-secondary text-light'><h2>Aaron Melhaff</h2></Card.Header>
               <Card.Body className='justify-content-center'>
                 <Card.Img className='portrait' src={PortraitImage} alt=' ' />
                 <Card.Title className='text-center text-primary'>
                   <h1 className='display-4'>About Me</h1>
                 </Card.Title>
-                <Card.Text>
-                  <p className='px-4'>
-                    I am a recently graduated software developer seeking opportunities to learn new technologies and create
-                    positive user experiences. During my time at school, I have learned different agile methods for boosting 
-                    productivity and communication. 
-                  </p>
+                <Card.Text className='px-4'>
+                  I am a recently graduated software developer seeking opportunities to learn new technologies and create
+                  positive user experiences. During my time at school, I have learned different agile methods for boosting 
+                  productivity and communication. 
                 </Card.Text>
                 <Link to={props.match.url + '/skills'} className='btn btn-tertiary d-inline-flex'>
                   <SVGIcon className='button-icon mr-2' path={icons('skills')} />
