@@ -10,43 +10,43 @@ const Skills = (props) => {
       <Card>
         <Card.Header>
           <div className='d-flex'>
-            <SVGIcon className='icon' fill='#9b1d20' path={icons('java')} />
+            <SVGIcon className='logo' fill='#9b1d20' path={icons('java')} />
             <h1 className='display-4 ml-3 mb-0'>Java</h1>
           </div>
           <div className='d-flex'>
-            <SVGIcon className='icon bg-dark' fill='#ffa400' path={icons('javascript')} />
+            <SVGIcon className='logo bg-dark' fill='#ffa400' path={icons('javascript')} />
             <h1 className='display-4 ml-3 mb-0'>JavaScript</h1>
           </div>
           <div className='d-flex'>
-            <SVGIcon className='icon' fill='#3b5177' path={icons('php')} />
+            <SVGIcon className='logo' fill='#3b5177' path={icons('php')} />
             <h1 className='display-4 ml-3 mb-0'>PHP</h1>
           </div>
           <div className='d-flex'>
-            <SVGIcon className='icon' fill='#f26419' path={icons('html')} />
+            <SVGIcon className='logo' fill='#f26419' path={icons('html')} />
             <h1 className='display-4 ml-3 mb-0'>HTML5</h1>
           </div>
           <div className='d-flex'>
-            <SVGIcon className='icon' fill='#1e92ff' path={icons('css')} />
+            <SVGIcon className='logo' fill='#1e92ff' path={icons('css')} />
             <h1 className='display-4 ml-3 mb-0'>CSS</h1>
           </div>
           <div className='d-flex'>
-            <SVGIcon className='icon' fill='#6d486d' path={icons('bootstrap')} />
+            <SVGIcon className='logo' fill='#6d486d' path={icons('bootstrap')} />
             <h1 className='display-4 ml-3 mb-0'>Boostrap</h1>
           </div>
           <div className='d-flex'>
-            <SVGIcon className='icon' fill='#679436' path={icons('nodejs')} />
+            <SVGIcon className='logo' fill='#679436' path={icons('nodejs')} />
             <h1 className='display-4 ml-3 mb-0'>Node.js</h1>
           </div>
           <div className='d-flex'>
-            <SVGIcon className='icon' fill='#1e92ff' path={icons('webpack')} />
+            <SVGIcon className='logo' fill='#1e92ff' path={icons('webpack')} />
             <h1 className='display-4 ml-3 mb-0'>Webpack</h1>
           </div>
           <div className='d-flex'>
-            <SVGIcon className='icon' fill='#1e92ff' path={icons('jquery')} />
+            <SVGIcon className='logo' fill='#1e92ff' path={icons('jquery')} />
             <h1 className='display-4 ml-3 mb-0'>jQuery</h1>
           </div>
           <div className='d-flex'>
-            <SVGIcon className='icon' fill='#61dafb' path={icons('react')} />
+            <SVGIcon className='logo' fill='#61dafb' path={icons('react')} />
             <h1 className='display-4 ml-3 mb-0'>React.js</h1>
           </div>
         </Card.Header>
