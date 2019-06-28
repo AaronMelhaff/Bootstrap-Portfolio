@@ -1,44 +1,62 @@
 import React from 'react';
 
-import { Fade, Container, Row, Col, Card } from 'react-bootstrap';
+import { Switch, Route, NavLink as Link } from 'react-router-dom';
+import { Fade, Container, Row, Col, Card, Tab, Nav } from 'react-bootstrap';
+import NoMatch from './NoMatch';
 
 
 const Portfolio = (props) => {
   return (
     <Fade in appear={true}>
       <Container className='mt-2'>
-        <Row>
-          <Col 
-            xs={{span: 12, offset: 0}}
-            sm={{span: 10, offset: 1}}
-            md={{span: 8,  offset: 2}}
-            lg={{span: 6,  offset: 3}}
-            >
-              <Card>
-                <Card.Body>
-                  
-                  <p className='text-primary'>Primary</p>
-                  <p className='bg-primary text-light'>Primary</p>
-                  <p className='text-secondary'>Secondary</p>
-                  <p className='bg-secondary text-light'>Secondary</p>
-                  <p className='text-info'>info</p>
-                  <p className='bg-info text-light'>info</p>
-                  <p className='text-success'>success</p>
-                  <p className='bg-success text-light'>success</p>
-                  <p className='text-warning'>warning</p>
-                  <p className='bg-warning text-light'>warning</p>
-                  <p className='text-danger'>danger</p>
-                  <p className='bg-danger text-light'>danger</p>
-                  
-                  <p className='text-orange'>orange</p>
-                  <p className='bg-orange text-light'>orange</p>
-                  
-                  <p className='text-tertiary'>tertiary</p>
-                  <p className='bg-tertiary text-light'>tertiary</p>
-                </Card.Body>
-              </Card>
-          </Col>
-        </Row>
+        <Card>
+          <Card.Header>
+            <h2 className='text-primary'>My works over the years...</h2>
+          </Card.Header>
+          <Card.Body className='p-4'>
+            <Tab.Container id='left-tabs-example' defaultActiveKey='first'>
+              
+              <Row>
+                <Col sm={4} lg={3} className='border p-4'>
+                  <h4 className='text-primary'>Java</h4>
+                  <Nav variant='pills' className='flex-column'>
+                    <Link to={props.match.url + '/adventure-game'} className='nav-link'>
+                      <span class='mr-2'>{String.fromCharCode('10148')}</span> Adventure Game
+                    </Link>
+                    <Link to={props.match.url + '/hunger-games'} className='nav-link'>
+                      <span class='mr-2'>{String.fromCharCode('10148')}</span> Hunger Games
+                    </Link>
+                    <Link to={props.match.url + '/web-crawler'} className='nav-link'>
+                      <span class='mr-2'>{String.fromCharCode('10148')}</span> Web Crawler
+                    </Link>
+                    <Link to={props.match.url + '/chat-program'} className='nav-link'>
+                      <span class='mr-2'>{String.fromCharCode('10148')}</span> Chat Program
+                    </Link>
+                    <Link to={props.match.url + '/assassin-program'} className='nav-link'>
+                      <span class='mr-2'>{String.fromCharCode('10148')}</span> Assassin Program
+                    </Link>
+                    <Link to={props.match.url + '/name-registry'} className='nav-link'>
+                      <span class='mr-2'>{String.fromCharCode('10148')}</span> Name Registry  
+                    </Link>
+                    <Link to={props.match.url + '/note-taker'} className='nav-link'>
+                      <span class='mr-2'>{String.fromCharCode('10148')}</span> Note Taker  
+                    </Link>
+                    <Link to={props.match.url + '/Paint-Program'} className='nav-link'>
+                      <span class='mr-2'>{String.fromCharCode('10148')}</span> Paint Program 
+                    </Link>
+                  </Nav>
+                </Col>
+                <Col sm={8} lg={9}>
+                  <Switch>
+                    <Route path={props.match.url + '/adventure-game'} component={NoMatch}/>
+                    <Route path={props.match.url + '/hunger-games'} component={NoMatch}/>
+                    <Route path={props.match.url + '/:other'} component={NoMatch}/>
+                  </Switch>
+                </Col>
+              </Row>
+            </Tab.Container>
+          </Card.Body>
+        </Card>
       </Container>
     </Fade>
   );
