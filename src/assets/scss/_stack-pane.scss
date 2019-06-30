@@ -1,0 +1,12 @@
+.stack-pane {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  div.stack-pane-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+  }
+}
