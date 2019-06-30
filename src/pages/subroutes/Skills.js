@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { Fade, Card } from 'react-bootstrap';
-import SVGIcon from './../components/SVGIcon';
-import icons from './../utilities/icons';
+import SVGIcon from './../../components/SVGIcon';
+import icons from './../../utilities/icons';
 
 const Skills = (props) => {
   return (
