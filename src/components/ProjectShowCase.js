@@ -14,6 +14,12 @@ const ProjectShowCase = (props) => {
     const returnURLParams = new URLSearchParams(window.location.search);
     returnURLParams.delete('project');
 
+    // Display link to repo if one is provided.
+    const repoIcon = (repository !== undefined) ?
+      <a className='text-light mt-1 ml-2' href={repository} target='_blank' rel='noopener noreferrer'>
+        <SVGIcon className='button-icon' path={icons('github')}/>
+      </a> : '';
+
     const imageComponents = (images !== undefined) ? images.map((image, index) => 
       <Col sm={12} md={6} lg={4}>
         <Figure className='p-2'>
@@ -31,7 +37,7 @@ const ProjectShowCase = (props) => {
   
     return (
       <Fade in appear={true}>
-        <Card className='border-0'>
+        <Card className='portfolio-showcase border-0'>
           <Card.Header className='bg-primary text-light'>
             <div className='d-flex'>
               <Link to={props.returnURL + '?' + returnURLParams.toString()} 
@@ -46,9 +52,7 @@ const ProjectShowCase = (props) => {
                 </div>
               </div> 
               <span className='ml-auto pt-2 text-nowrap'>{date}</span>
-              <a className='text-light mt-1 ml-2' href={repository} target='_blank' rel='noopener noreferrer'>
-                <SVGIcon className='button-icon' path={icons('github')}/>
-              </a>
+              {repoIcon}
             </div>
             
           </Card.Header>
