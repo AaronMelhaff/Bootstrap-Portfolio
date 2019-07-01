@@ -44,10 +44,7 @@ $grid-gutter-width: 0;
       height: 100%;
       max-height: 2rem;
       fill: color-yiq($value);
-      &.icon-sm {
-        height: 1.75rem;
-        padding-bottom: 4px;
-      }
+      
     }
   }
   .btn-outline-#{$color} {
@@ -70,5 +67,17 @@ $grid-gutter-width: 0;
         fill: color-yiq($value);
       }
     }
+  }
+  .text-#{$color} {
+    .button-icon {
+      fill: $value;
+    }
+  }
+
+  .button-icon {
+    display: inline-block;
+    height: 100%;
+    max-height: 2rem;
+    
   }
 }
