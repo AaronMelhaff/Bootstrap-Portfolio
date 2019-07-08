@@ -4,11 +4,15 @@ import { NavLink as Link } from 'react-router-dom';
 import { Fade, Container, Row, Col, Card, Button } from 'react-bootstrap';
 import projects from './../utilities/projects';
 import StackPane from '../components/StackPane';
+import ProjectShowCase from '../components/ProjectShowCase';
 
 
 const Portfolio = (props) => {
 
-  // Grab all tags from existing projects.
+  // Pull selected tags from URL.
+  const urlParams = new URLSearchParams(props.location.search);
+  const selectedTags = new Set(urlParams.getAll('tags'));
+  const selectedProject = projects.find(project => project.id === urlParams.get('project'));
   const tags = new Set();
   projects.forEach(project => {
     project.tags.forEach(tag => tags.add(tag))
@@ -24,11 +28,6 @@ const Portfolio = (props) => {
       {tag}
     </Button>
   );
-
-  // Pull selected tags from URL.
-  const urlParams = new URLSearchParams(props.location.search);
-  const selectedTags = new Set(urlParams.getAll('tags'));
-  const selectedProject = projects.find(project => project.url === urlParams.get('project'));
 
   // Create badges to display all of the selected tags.
   const selectedTagBadges = Array.from(selectedTags).map((tag, index) => 
@@ -61,16 +60,13 @@ const Portfolio = (props) => {
       <div key={index}>
         <Link 
           className='btn btn-link' 
-          to={props.match.url + `?project=${project.url}${appliedFilterTags}`}
+          to={props.match.url + `?project=${project.id}${appliedFilterTags}`}
         >
           {project.title} - {project.date}
         </Link>
       </div>
     );
   }) : <h4 className='text-muted text-center p-4'>No matches found!</h4>;
-
-  // Generate displayed project or dummy if no project is active.
-  const ProjectComponent = (selectedProject !== undefined) ? selectedProject.component : (props) => <div></div>;
 
   function tagClickHandler(event) {
     const targetTag = event.target.innerText;
@@ -109,24 +105,24 @@ const Portfolio = (props) => {
         <StackPane>
           <Card className='border-0'>
             <Card.Header className='bg-secondary text-light'>
-              <h2 className='mb-0'>Stuff I made</h2>
+              <h2>Stuff I made</h2>
             </Card.Header>
             <Card.Body className='p-0'>
               <Row className='bg-info'>
-                <Col sm={5} md={4} lg={3} className='p-2'>
-                  <h3 className='text-secondary mb-0 ml-2'>Tags</h3>
+                <Col md={4} lg={3} className='p-2'>
+                  <h3 className='text-secondary ml-2'>Tags</h3>
                 </Col>
-                <Col sm={6} md={8} lg={9}>
+                <Col md={8} lg={9}>
                   <div className='d-flex flex-wrap py-2'>
                     {selectedTagBadges}
                   </div>
                 </Col>
               </Row>
               <Row>
-                <Col sm={5} md={4} lg={3} className='border-right p-2'>
+                <Col md={4} lg={3} className='border-right border-bottom p-2'>
                   { tagButtons }
                 </Col>
-                <Col sm={6} md={8} lg={9}>
+                <Col md={8} lg={9}>
                   <div className='p-2'>
                     {projectLinks}
                   </div>
@@ -134,7 +130,7 @@ const Portfolio = (props) => {
               </Row>
             </Card.Body>
           </Card>
-          <ProjectComponent />
+          <ProjectShowCase project={selectedProject} returnURL={'/portfolio'}/> 
         </StackPane>
       </Container>
     </Fade>
