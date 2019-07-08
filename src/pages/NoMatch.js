@@ -1,7 +1,12 @@
 import React from 'react';
 
-import { Fade, Container, Row, Col, Alert } from 'react-bootstrap';
-
+import {
+  Fade,
+  Container,
+  Row,
+  Col,
+  Alert
+} from 'react-bootstrap';
 
 const NoMatch = (props) => {
   return (
