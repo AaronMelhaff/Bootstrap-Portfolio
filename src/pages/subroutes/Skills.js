@@ -1,55 +1,43 @@
 import React from 'react';
 
-import { Fade, Card } from 'react-bootstrap';
+import { Fade, Card, Row, Col } from 'react-bootstrap';
+
+import skillList from './../../utilities/skill-list';
+
 import SVGIcon from './../../components/SVGIcon';
 import icons from './../../utilities/icons';
+
+const Skill = (props) => {
+  return (
+    <Col xs={4} sm={3} lg={2} xl={2}>
+      <div className='skill-display m-2 m-sm-1 m-md-2 m-lg-3 m-lg-4 rounded py-2'>
+        <SVGIcon className='logo d-block mx-auto' stroke={props.stroke} fill={props.fill} path={icons(props.icon)} />
+        <h1 className='lead text-center'>{props.title}</h1>
+      </div>
+    </Col>
+  );
+}
+
+const Category = (props) => {
+  return (
+    <div className='mb-4'>
+      <h1 className='text-primary mb-2'>{props.title}</h1>
+      <Row>
+        {props.list.map((skill, index) => <Skill key={index} {...skill} />)}
+      </Row>
+    </div>
+  );
+}
 
 const Skills = (props) => {
   return (
     <Fade in appear={true}>
       <Card>
-        <Card.Header>
-          <div className='d-flex'>
-            <SVGIcon className='logo' fill='#9b1d20' path={icons('java')} />
-            <h1 className='display-4 ml-3 mb-0'>Java</h1>
-          </div>
-          <div className='d-flex'>
-            <SVGIcon className='logo bg-dark' fill='#ffa400' path={icons('javascript')} />
-            <h1 className='display-4 ml-3 mb-0'>JavaScript</h1>
-          </div>
-          <div className='d-flex'>
-            <SVGIcon className='logo' fill='#3b5177' path={icons('php')} />
-            <h1 className='display-4 ml-3 mb-0'>PHP</h1>
-          </div>
-          <div className='d-flex'>
-            <SVGIcon className='logo' fill='#f26419' path={icons('html')} />
-            <h1 className='display-4 ml-3 mb-0'>HTML5</h1>
-          </div>
-          <div className='d-flex'>
-            <SVGIcon className='logo' fill='#1e92ff' path={icons('css')} />
-            <h1 className='display-4 ml-3 mb-0'>CSS</h1>
-          </div>
-          <div className='d-flex'>
-            <SVGIcon className='logo' fill='#6d486d' path={icons('bootstrap')} />
-            <h1 className='display-4 ml-3 mb-0'>Boostrap</h1>
-          </div>
-          <div className='d-flex'>
-            <SVGIcon className='logo' fill='#679436' path={icons('nodejs')} />
-            <h1 className='display-4 ml-3 mb-0'>Node.js</h1>
-          </div>
-          <div className='d-flex'>
-            <SVGIcon className='logo' fill='#1e92ff' path={icons('webpack')} />
-            <h1 className='display-4 ml-3 mb-0'>Webpack</h1>
-          </div>
-          <div className='d-flex'>
-            <SVGIcon className='logo' fill='#1e92ff' path={icons('jquery')} />
-            <h1 className='display-4 ml-3 mb-0'>jQuery</h1>
-          </div>
-          <div className='d-flex'>
-            <SVGIcon className='logo' fill='#61dafb' path={icons('react')} />
-            <h1 className='display-4 ml-3 mb-0'>React.js</h1>
-          </div>
-        </Card.Header>
+        <Card.Body>
+          {skillList.categories.map((category, index) => 
+            <Category {...category} key={index}/>
+          )}
+        </Card.Body>
       </Card>
     </Fade>
   );

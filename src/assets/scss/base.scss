@@ -11,6 +11,7 @@
 }
 
 @import './portfolio-bootstrap';
+@import './skill-display';
 @import './stack-pane';
 
 
@@ -45,11 +46,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .portfolio-showcase {
   min-height: 800px;
-}
-
-.logo {
-  width: 64px;
-  height: 64px;
 }
 
 .icon-sm {
