@@ -13,7 +13,7 @@ function Routes(props) {
     <Router>
       <SiteNav />
       <Switch>
-        <Redirect exact from='/' to='/about' />
+        <Redirect exact from='/' to='/about/skills' />
         <Route path='/about' component={About} />
         <Route path='/portfolio' component={Portfolio} />
         <Route path='/pallete' component={Pallete} />
