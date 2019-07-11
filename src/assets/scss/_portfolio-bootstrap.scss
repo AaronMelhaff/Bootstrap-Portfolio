@@ -6,12 +6,14 @@ $secondary:     #165b68;
 $success:       #679436;
 $warning:       #ffa400;
 $danger:        #9b1d20;
-$info:          #99e1d9;
 
 $theme-colors: (
+  "tertiary": #6d486d,
+  "primary-light": #99b8ee,
+  "secondary-light": #99e1d9,
+  "tertiary-light": #e7c0e7,
   "green":    #006225,
-  "orange":   #f26419,
-  "tertiary": #6d486d
+  "orange":   #f26419
 );
 
 $enable-rounded: false;

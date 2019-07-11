@@ -108,7 +108,7 @@ const Portfolio = (props) => {
               <h2>Stuff I made</h2>
             </Card.Header>
             <Card.Body className='p-0'>
-              <Row className='bg-info'>
+              <Row className='bg-secondary-light'>
                 <Col md={4} lg={3} className='p-2'>
                   <h3 className='text-secondary ml-2'>Tags</h3>
                 </Col>
