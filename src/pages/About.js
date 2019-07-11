@@ -16,11 +16,11 @@ const About = (props) => {
         <Row>
           <Col>
             <Card className='border-0'>
-              <Card.Header className='bg-tertiary text-light'><h2>Aaron Melhaff</h2></Card.Header>
+              <Card.Header className='bg-tertiary text-light'><h2>About Me</h2></Card.Header>
               <Card.Body className='justify-content-center'>
                 <Card.Img className='portrait' src={PortraitImage} alt=' ' />
                 <Card.Title className='text-center text-primary'>
-                  <h1 className='display-4'>About Me</h1>
+                  <h1 className='display-4'>Aaron Melhaff</h1>
                 </Card.Title>
                 <Card.Text className='px-4 lead'>
                   I am a recently graduated software developer seeking opportunities to learn new technologies and create
