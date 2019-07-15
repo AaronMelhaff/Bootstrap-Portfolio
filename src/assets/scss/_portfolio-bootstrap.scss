@@ -42,18 +42,12 @@ $grid-gutter-width: 0;
 @each $color, $value in $theme-colors {
   .btn-#{$color}, .btn-link {
     .button-icon {
-      display: inline-block;
-      height: 100%;
-      max-height: 2rem;
       fill: color-yiq($value);
       
     }
   }
   .btn-outline-#{$color} {
     .button-icon {
-      display: inline-block;
-      height: 100%;
-      max-height: 2rem;
       fill: $value;
       transition: fill 0.1s;
     }
@@ -78,8 +72,7 @@ $grid-gutter-width: 0;
 
   .button-icon {
     display: inline-block;
-    height: 100%;
-    max-height: 2rem;
+    height: 1.75rem;
     
   }
 }
