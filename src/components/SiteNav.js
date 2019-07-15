@@ -8,7 +8,7 @@ import icons from '../utilities/icons';
 export default function SiteNav(props) {
 
   return (
-    <Navbar collapseOnSelect  bg='primary' variant="dark" expand='lg'>
+    <Navbar collapseOnSelect  bg='primary' variant="dark" expand='lg' className='px-4'>
         <Navbar.Toggle aria-controls='site-nav'/>
         <Navbar.Collapse id='site-nav'>
             <Nav className='w-356px'>
