@@ -27,14 +27,16 @@ const About = (props) => {
                   positive user experiences. During my time at school, I have learned different agile methods for boosting 
                   productivity and communication. 
                 </Card.Text>
-                <Link to={props.match.url + '/skills'} className='btn btn-tertiary d-inline-flex'>
-                  <SVGIcon className='button-icon mr-2' path={icons('skills')} />
-                  <h4>Skills</h4>
-                </Link>
-                <Link to={props.match.url + '/education'} className='btn btn-tertiary d-inline-flex'>
-                  <SVGIcon className='button-icon mr-2' path={icons('education')} />
-                  <h4>Education</h4>
-                </Link>
+                <div className='mx-auto d-flex justify-content-center'>
+                  <Link to={props.match.url + '/skills'} className='btn btn-tertiary d-flex'>
+                    <SVGIcon className='button-icon mr-2' path={icons('skills')} />
+                    <h4>Skills</h4>
+                  </Link>
+                  <Link to={props.match.url + '/education'} className='btn btn-tertiary d-flex'>
+                    <SVGIcon className='button-icon mr-2' path={icons('education')} />
+                    <h4>Education</h4>
+                  </Link>
+                </div>
                 <Switch>
                   <Route path={props.match.url + '/education'} component={Education}/>
                   <Route path={props.match.url + '/skills'} component={Skills}/>
