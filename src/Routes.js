@@ -6,6 +6,7 @@ import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 import Pallete from './pages/Pallete';
 import NoMatch from './pages/NoMatch';
+import Contact from './pages/Contact';
 
 function Routes(props) {
 
@@ -16,6 +17,7 @@ function Routes(props) {
         <Redirect exact from='/' to='/about/skills' />
         <Route path='/about' component={About} />
         <Route path='/portfolio' component={Portfolio} />
+        <Route path='/contact' component={Contact} />
         <Route path='/pallete' component={Pallete} />
         <Route component={NoMatch} />
       </Switch>
