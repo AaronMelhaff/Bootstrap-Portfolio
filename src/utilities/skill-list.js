@@ -107,14 +107,9 @@ const skillList = {
           fill: '#679436'
         },
         {
-          title: 'Ruby',
-          icon: 'ruby',
-          fill: '#9b1d20'
-        },
-        {
-          title: 'Rails',
-          icon: 'rails',
-          fill: '#9b1d20'
+          title: 'Redux',
+          icon: 'redux',
+          fill: '#764abc'
         },
         {
           title: 'MongoDB',
@@ -125,6 +120,16 @@ const skillList = {
           title: 'Cucumber',
           icon: 'cucumber',
           fill: '#33cc33'
+        },
+        {
+          title: 'Ruby',
+          icon: 'ruby',
+          fill: '#9b1d20'
+        },
+        {
+          title: 'Rails',
+          icon: 'rails',
+          fill: '#9b1d20'
         },
         {
           title: 'RSpec'
