@@ -105,7 +105,7 @@ const Portfolio = (props) => {
         <StackPane>
           <Card className='border-0'>
             <Card.Header className='bg-secondary text-light'>
-              <h2>Stuff I made</h2>
+              <h2>Things I made</h2>
             </Card.Header>
             <Card.Body className='p-0'>
               <Row className='bg-secondary-light'>
