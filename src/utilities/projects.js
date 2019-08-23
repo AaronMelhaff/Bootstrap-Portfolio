@@ -1,4 +1,8 @@
-
+import gloomhavenMobileView from './../assets/screenshots/gloomhaven-assist-mobile.PNG';
+import gloomhavenLargeView from './../assets/screenshots/gloomhaven-assist-large-view.PNG';
+import scheduleItMain from './../assets/screenshots/schedule-it-main.PNG';
+import scheduleItEditting from './../assets/screenshots/schedule-it-editting.PNG';
+import scheduleItCatalog from './../assets/screenshots/schedule-it-catalog.PNG';
 
 const projects = [
   {
@@ -43,7 +47,7 @@ const projects = [
     title: 'Chat Program',
     id: 'chat-program',
     date: 'Fall 2017',
-    desc: 'Small chat program we wrote in class one day.',
+    desc: 'This was a small Java Swing app that allowed users to connect to a server and chat with each other.',
     repository: 'https://github.com/AaronMelhaff/ChatProgram',
     tags: ['java', 'sockets']
   },
@@ -51,7 +55,7 @@ const projects = [
     title: 'Assassin Program',
     id: 'assassin-program',
     date: 'Spring 2017',
-    desc: 'Program I made for my Java 2 class that demonstrates linked lists.',
+    desc: 'This was a program I made for my Java 2 course in order to demonstrate a circular linked list.',
     repository: 'https://github.com/AaronMelhaff/AssassinManager',
     tags: ['java', 'data-structures']
   },
@@ -84,22 +88,46 @@ const projects = [
     id: 'bootstrap-portfolio',
     date: 'Spring 2019',
     desc: 'This is my current rendition of my portfolio. I made it using React and Bootstrap.',
-    repository: 'https://github.com/AaronMelhaff/PaintProgram',
+    repository: 'https://github.com/AaronMelhaff/Bootstrap-Portfolio',
     tags: ['javascript', 'react', 'web-development', 'bootstrap', 'front-end', 'sass']
   },
   {
     title: 'Gloomtility',
     id: 'gloomtility',
     date: 'Spring 2019',
-    desc: 'This was a group project I did with other students.',
+    images: [
+      {
+        src: gloomhavenMobileView,
+        caption: 'App in a mobile screen size.'
+      },
+      {
+        src: gloomhavenLargeView,
+        caption: 'App viewed in large window.'
+      }
+    ],
+    desc: 'An interactive web-app I made with other students to create a mobile-friendly token management web app for the popular tabletop game Gloomhaven.  The tool uses a React/Redux web application interacting with a Spring Boot API, all hosted on AWS platform. ',
     tags: ['javascript', 'java','web-development', 'front-end', 'restful', 'api', 'json', 'postgresql', 'full-stack', 'aws', 'react', 'redux', 'spring', 'spring-boot', 'sass']
   },
   {
     title: 'Schedule-IT',
     id: 'schedule-it',
     date: 'Summer 2018',
-    desc: 'Scheduling app I made during my school internship.',
-    tags: ['javascript', 'jquery', 'web-development', 'front-end', 'sass', 'php', 'api', 'mysql', 'sql', 'full-stack', 'json', 'bootstrap']
+    images: [
+      {
+        src: scheduleItMain,
+        caption: 'Main page of the schedule.'
+      },
+      {
+        src: scheduleItEditting,
+        caption: 'Demonstration of content editting.'
+      },
+      {
+        src: scheduleItCatalog,
+        caption: 'Demonstration of catalog view.'
+      }
+    ],
+    desc: 'An app I developed to assist instructors with class scheduling. The app replaces the previous method of manually filling out spreadsheets. Used a JavaScript/jQuery front end application styled with Bootstrap and SASS, and PHP with a MySQL database for the backend.',
+    tags: ['javascript', 'jquery', 'web-development', 'front-end', 'sass', 'php', 'api', 'mysql', 'sql', 'full-stack', 'json', 'bootstrap', 'rest']
   }
 ];
 
