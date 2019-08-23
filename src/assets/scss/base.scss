@@ -40,8 +40,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-image {
-  object-fit: cover;
+  object-fit: contain;
   height: 22rem;
+  background-color: #6d6d6d;
+  
+}
+
+.project-image:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.5);
 }
 
 .portfolio-showcase {
