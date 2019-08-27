@@ -2,7 +2,6 @@ import React from 'react';
 
 import { Switch, Route, NavLink as Link } from 'react-router-dom';
 import { Fade, Container, Row, Col, Card } from 'react-bootstrap';
-import PortraitImage from './../assets/images/portrait.jpg';
 import Skills from './subroutes/Skills';
 import Education from './subroutes/Education';
 import SVGIcon from '../components/SVGIcon';
@@ -18,11 +17,10 @@ const About = (props) => {
             <Card className='border-0'>
               <Card.Header className='bg-secondary text-light'><h2>About Me</h2></Card.Header>
               <Card.Body className='justify-content-center'>
-                <Card.Img className='portrait' src={PortraitImage} alt=' ' />
-                <Card.Title className='text-center text-primary'>
+                <Card.Title className='text-center text-primary mt-4 mb-2'>
                   <h1 className='display-4'>Aaron Melhaff</h1>
                 </Card.Title>
-                <Card.Text className='px-4 lead'>
+                <Card.Text className='lead px-4'>
                   I am a recently graduated software developer seeking opportunities to learn new technologies and create
                   positive user experiences. During my time at school, I have learned different agile methods for boosting 
                   productivity and communication. 
