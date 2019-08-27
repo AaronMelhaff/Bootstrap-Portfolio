@@ -19,9 +19,6 @@ const Education = (props) => {
             My instructors used their past experience in the field to teach us about relevant 
             subjects like clean code, agile methodologies, and collaborating with other developers.
           </div>
-          <div className='px-4 pb-4 lead'>
-            In our classes, we often worked in groups to deliver products to real clients.
-          </div>
 
           <div className='p-4'>
             <Row>
