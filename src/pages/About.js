@@ -16,7 +16,7 @@ const About = (props) => {
         <Row>
           <Col>
             <Card className='border-0'>
-              <Card.Header className='bg-tertiary text-light'><h2>About Me</h2></Card.Header>
+              <Card.Header className='bg-secondary text-light'><h2>About Me</h2></Card.Header>
               <Card.Body className='justify-content-center'>
                 <Card.Img className='portrait' src={PortraitImage} alt=' ' />
                 <Card.Title className='text-center text-primary'>
@@ -28,11 +28,11 @@ const About = (props) => {
                   productivity and communication. 
                 </Card.Text>
                 <div className='mx-auto d-flex justify-content-center mt-4'>
-                  <Link to={props.match.url + '/skills'} className='btn btn-tertiary d-flex'>
+                  <Link to={props.match.url + '/skills'} className='btn btn-primary d-flex'>
                     <SVGIcon className='button-icon mr-2' path={icons('skills')} />
                     <h4>Skills</h4>
                   </Link>
-                  <Link to={props.match.url + '/education'} className='btn btn-tertiary d-flex'>
+                  <Link to={props.match.url + '/education'} className='btn btn-primary d-flex'>
                     <SVGIcon className='button-icon mr-2' path={icons('education')} />
                     <h4>Education</h4>
                   </Link>
