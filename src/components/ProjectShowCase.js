@@ -23,11 +23,13 @@ const ProjectShowCase = (props) => {
     const imageComponents = (images !== undefined) ? images.map((image, index) => 
       <Col sm={12} md={6} lg={4} key={index}>
         <Figure className='p-2'>
-          <Figure.Image
-            className='project-image'
-            alt={image.caption}
-            src={image.src}
-          />
+          <a href={image.src}>
+            <Figure.Image
+              className='project-image'
+              alt={image.caption}
+              src={image.src}
+            />
+          </a>
           <Figure.Caption>
             {image.caption}
           </Figure.Caption>
