@@ -4,14 +4,14 @@ const skillList = {
       title: 'Primary Skills',
       list: [
         {
-          title: 'Javascript',
-          icon: 'javascript',
-          fill: '#f0db4f'
-        },
-        {
           title: 'Java',
           icon: 'java',
           fill: '#9b1d20',
+        },
+        {
+          title: 'Javascript',
+          icon: 'javascript',
+          fill: '#f0db4f'
         },
         {
           title: 'HTML5',
